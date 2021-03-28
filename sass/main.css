@@ -21,7 +21,7 @@
 }
 
 .section-cards {
-  padding: 25rem 0 40rem 0;
+  padding: 20rem 0 10rem 0;
   text-transform: capitalize;
   background-color: #f7f7f7;
   margin-top: -10rem;
@@ -187,10 +187,13 @@
   margin-bottom: 8rem;
 }
 
+.u-margin-bigger {
+  margin-top: 12rem;
+}
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  background-color: #fff;
   padding: 1.5rem 2.5rem;
   border-radius: 10rem;
   -webkit-transition: all 0.2s;
@@ -209,11 +212,22 @@
 
 .btn--white {
   color: #777;
+  background-color: #fff;
 }
 
 .btn--white::after {
   color: #777;
   background-color: #fff;
+}
+
+.btn--green {
+  color: #eee;
+  background-color: #55c57a;
+}
+
+.btn--green::after {
+  color: #eee;
+  background-color: #55c57a;
 }
 
 .btn:hover {

@@ -3,7 +3,6 @@
     &:visited{
         text-transform: uppercase;
         text-decoration: none;
-        background-color: $color-white;
         padding: 1.5rem 2.5rem;
         border-radius: 10rem;
         transition: all 0.2s;
@@ -21,10 +20,21 @@
 
     &--white{
         color:$color-grey;
+        background-color: $color-white;
 
         &::after{
             color:$color-grey;
             background-color: $color-white;
+        }
+    }
+
+    &--green{
+        color:$color-grey-light-2;
+        background-color: $color-primary;
+
+        &::after{
+            color:$color-grey-light-2;
+            background-color: $color-primary;
         }
     }
 
