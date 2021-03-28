@@ -1,0 +1,119 @@
+.cards{
+    perspective: 115rem;
+    -moz-perspective: 115rem;
+    position: relative;
+    height: 52rem;
+    
+    
+    
+    
+
+    &__side{
+    
+    height: 52rem;
+    transition: all .8s ease;
+    color: #fff;
+    font-size: 1.8rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    backface-visibility: hidden;
+    width: 100%;
+    
+
+        &--front{
+            background-color: $color-white;
+            color: #000;
+            box-shadow:0 1rem 5rem rgba($color-dark-black,0.15);
+
+        }
+
+        &--back{
+            
+            transform: rotateY(180deg);
+            box-shadow:0 1rem 5rem rgba($color-dark-black,0.15);
+
+            &--1{
+                background-image: linear-gradient(to right bottom,$color-secondary-light,$color-secondary-dark);
+            }
+
+            &--2 {
+                background-image: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark);
+            }
+
+            &--3{
+                background-image: linear-gradient(to right bottom,$color-tertiary-light,$color-tertiary-dark);
+            }
+        }
+
+    }
+
+
+
+    &:hover &__side--front{
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back{
+        transform: rotateY(0);
+    }
+
+    &__images{
+
+        height: 25rem;
+        background-size: cover;
+        overflow: hidden;
+        border-radius: 3px;
+        background-blend-mode: screen;
+        clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+
+
+        &--1{
+            background-image: linear-gradient(to right bottom,$color-secondary-light,$color-secondary-dark),url(../../img/nat-5.jpg);
+        }
+        
+        
+    }
+
+    &__header{
+        font-size: 3rem;
+        font-weight: 400;
+        color: $color-white;
+        text-transform: uppercase;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        display: inline-block;
+        text-align: right;
+        width: 65%;
+    }
+
+    &__header--span{
+        -webkit-box-decoration-break:clone;
+        box-decoration-break: clone;
+        padding: 1rem 0;
+
+        &--1{
+            background-image: linear-gradient(to right bottom,rgba($color-secondary-light,0.85),rgba($color-secondary-dark,0.85));
+        }
+    }
+
+    &__details{
+        width: 85%;
+        text-align: center;
+        margin: 0 auto;
+        text-transform: capitalize;
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: $color-grey;
+        li{
+            list-style: none;
+            padding: 1rem 0;
+
+            &:not(:last-child){
+                border-bottom: 1px solid $color-grey-light-2;
+            }
+        }
+        
+    }
+}
