@@ -32,6 +32,9 @@
             
             transform: rotateY(180deg);
             box-shadow:0 1rem 5rem rgba($color-dark-black,0.15);
+            text-align: center;
+
+
 
             &--1{
                 background-image: linear-gradient(to right bottom,$color-secondary-light,$color-secondary-dark);
@@ -71,6 +74,12 @@
         &--1{
             background-image: linear-gradient(to right bottom,$color-secondary-light,$color-secondary-dark),url(../../img/nat-5.jpg);
         }
+        &--2{
+            background-image: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark),url(../../img/nat-6.jpg);
+        }
+        &--3{
+            background-image: linear-gradient(to right bottom,$color-tertiary-light,$color-tertiary-dark),url(../../img/nat-7.jpg);
+        }
         
         
     }
@@ -96,6 +105,12 @@
         &--1{
             background-image: linear-gradient(to right bottom,rgba($color-secondary-light,0.85),rgba($color-secondary-dark,0.85));
         }
+        &--2{
+            background-image: linear-gradient(to right bottom,rgba($color-primary-light,0.85),rgba($color-primary-dark,0.85));
+        }
+        &--3{
+            background-image: linear-gradient(to right bottom,rgba($color-tertiary-light,0.85),rgba($color-tertiary-dark,0.85));
+        }
     }
 
     &__details{
@@ -115,5 +130,21 @@
             }
         }
         
+    }
+
+    &__position-box{
+        margin-top: 15rem;
+
+        &--only{
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        &--value{
+            font-weight: 100;
+            font-size: 6rem;
+            margin-bottom: 7rem;
+        }
     }
 }
