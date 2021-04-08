@@ -5,3 +5,35 @@
         display: table;
     }
 }
+
+// media query manager
+// for phone::              max-width:600px
+// for tablet-potrait::     max-width:900px
+// for tablet-landscape::   max-width:600px
+
+// for big screen::         min-width:1800px
+
+// $device choice
+
+// -phone
+// -tab-pot
+// -tab-land
+// -big-screen
+
+// we would use em which 1em =16px
+
+@mixin responsive($device){
+    @if $device == phone {
+        @media (max-width: 37.5em) {@content}; //600px/16px= 37.5em
+    }
+
+    @if $device == tab-pot {
+        @media (max-width: 56.25em) {@content}; //900px/16px= 56.25em
+    }
+    @if $device == tab-land {
+        @media (max-width: 75em) {@content}; //1200px/16px = 75em
+    }
+    @if $device == big-screen {
+        @media (min-width: 112.5em) {@content}; //1800px/16px = 112.5em
+    }
+}

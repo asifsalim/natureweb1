@@ -6,7 +6,20 @@
     box-sizing: inherit;
 }
 html{
-    font-size: 62.5%;
+    font-size: 62.5%; //1rem = 10px 10/16=62.5%
+
+    @include responsive (tab-land){
+        font-size: 56.25%; //1rem =9px 9/16=56.25%
+    }
+    @include responsive (tab-pot){
+        font-size: 50%; //1rem =8px 8/16=50%
+    }
+    @include responsive (phone){
+        font-size: 30%; //1rem =4.8px 4.8/16=56.25%
+    }
+    @include responsive (big-screen){
+        font-size: 75%;//1rem =12px 4.8/16=75%
+    }
 }
 body {
     font-family: "Lato",sans-serif;
