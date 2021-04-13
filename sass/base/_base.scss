@@ -8,6 +8,7 @@
 html{
     font-size: 62.5%; //1rem = 10px 10/16=62.5%
 
+
     @include responsive (tab-land){
         font-size: 56.25%; //1rem =9px 9/16=56.25%
     }
@@ -27,5 +28,10 @@ body {
     line-height: 1.7;
     color:$color-grey;
     box-sizing: border-box;
-    margin: 2rem;
+    padding: 2rem;
+
+    @include responsive (tab-land){
+       padding: 0;
+
+    }
 }

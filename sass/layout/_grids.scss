@@ -2,22 +2,45 @@
     max-width: $gutter-width;
     margin: 0 auto;
 
+    @include responsive (tab-land){
+        max-width: $gutter-width-landscape;
+
+     }
+
     &:not(:last-child){
         margin-bottom: $gutter-vertical;
+
+        @include responsive(tab-land){
+            margin-bottom: $gutter-vertical-small;
+        }
+
+
     }
+
 
     @include clearfix;
     [class^="col-"]{
         float: left;
 
 
+
         &:not(:last-child){
             margin-right: $gutter-horizontal;
+
+            @include responsive(tab-land){
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-small;
+            }
+
+        }
+
+        @include responsive(tab-land){
+            width: 100% !important;
         }
     }
     .col-1of2{
         width: calc((100% - #{$gutter-horizontal}) / 2);
-        
+
     }
 
     .col-1of4{
@@ -28,5 +51,5 @@
         width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
     }
 
-    
+
 }

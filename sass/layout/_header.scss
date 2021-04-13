@@ -5,17 +5,30 @@
     background-size: cover;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
     position: relative;
-    
+
+    @include responsive(tab-land){
+        height: 60vh;
+        clip-path: polygon(0 0, 100% 0, 100% 45vh, 0% 100%);
+        margin-bottom: 10rem;
+    }
+
+    @include responsive(phone){
+        height: 40vh;
+        clip-path: polygon(0 0, 100% 0, 100% 30vh, 0% 100%);
+        margin-bottom: 15rem;
+
+    }
+
     &__logo-box {
         position: absolute;
         top: 4rem;
         left:4rem;
     }
-    
+
     &__logo {
         height: 3.5rem;
     }
-    
+
     &__text-box{
         position: absolute;
         top: 45%;

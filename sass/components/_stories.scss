@@ -6,17 +6,29 @@
     border-radius: 3px;
     padding: 6rem 8rem;
     transform: skewX(-12deg);
+    @include responsive(tab-land){
+        width: 100%;
+        transform: skew(0);
+    }
 
     &__shape{
         height: 15rem;
         width: 15rem;
         float: left;
-        shape-outside: circle(50% at 50% 50%);
         -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
         overflow: hidden;
+
+        @include responsive(tab-land){
+
+            transform: translateX(-3rem) skewX(0);
+           
+
+
+        }
 
 
 
@@ -28,11 +40,21 @@
         transition: all 0.5s;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
+        @include responsive(tab-land){
+
+            padding-right: 1rem;
+
+
+        }
 
 
     }
     &__text{
         transform: skewX(12deg);
+        @include responsive(tab-land){
+
+            transform:skew(0);
+        }
 
     }
 
@@ -60,6 +82,7 @@
     &:hover &__image{
         transform: translateX(-4rem) scale(1);
         filter: blur(3px) brightness(60%);
+
     }
 
 

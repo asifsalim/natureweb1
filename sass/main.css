@@ -4,6 +4,13 @@
   margin-top: -20vh;
 }
 
+@media (max-width: 75em) {
+  .section-about {
+    width: 100%;
+    padding: 20rem 0;
+  }
+}
+
 .section-feature {
   padding: 25rem 0;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.801), rgba(40, 180, 133, 0.801)), url(../img/nat-4.jpg);
@@ -65,8 +72,8 @@
 
 @keyframes moveInBottom {
   0% {
-    transform: translateY(3rem);
     opacity: 0;
+    transform: translateY(2rem);
   }
   100% {
     opacity: 1;
@@ -89,6 +96,13 @@
   animation-duration: 2s;
 }
 
+@media (max-width: 75em) {
+  .header-primary--main {
+    font-size: 4rem;
+    letter-spacing: 1rem;
+  }
+}
+
 .header-primary--sub {
   font-size: 2rem;
   display: block;
@@ -96,6 +110,13 @@
   font-weight: 400;
   animation-name: moveInRight;
   animation-duration: 2s;
+}
+
+@media (max-width: 75em) {
+  .header-primary--sub {
+    font-size: 2rem;
+    letter-spacing: 1rem;
+  }
 }
 
 .heading-secondary {
@@ -158,9 +179,22 @@
   cursor: pointer;
 }
 
+@media (max-width: 75em) {
+  .btn, .btn:link, .btn:visited {
+    padding: 2rem;
+    font-size: 1.5rem;
+  }
+}
+
 .btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
+}
+
+@media (max-width: 75em) {
+  .btn--animated {
+    animation-fill-mode: none;
+  }
 }
 
 .btn--white {
@@ -244,9 +278,24 @@
   outline-offset: 1rem;
 }
 
+@media (max-width: 75em) {
+  .composition__photo {
+    float: left;
+    position: relative;
+    width: 33.33%;
+  }
+}
+
 .composition__photo--p1 {
   left: 0;
   top: -2rem;
+}
+
+@media (max-width: 75em) {
+  .composition__photo--p1 {
+    top: 1rem;
+    transform: scale(1.2);
+  }
 }
 
 .composition__photo--p2 {
@@ -254,9 +303,26 @@
   top: 2rem;
 }
 
+@media (max-width: 75em) {
+  .composition__photo--p2 {
+    top: -1rem;
+    transform: scale(1.3);
+    z-index: 100;
+  }
+}
+
 .composition__photo--p3 {
   left: 20%;
   top: 8rem;
+}
+
+@media (max-width: 75em) {
+  .composition__photo--p3 {
+    top: 1rem;
+    left: 0;
+    transform: scale(1.2);
+    z-index: 90;
+  }
 }
 
 .composition__photo:hover {
@@ -419,6 +485,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .card__price-box {
@@ -437,6 +504,42 @@
   font-weight: 100;
 }
 
+@media (max-width: 75em) {
+  .card {
+    height: auto;
+    margin: 0 auto;
+    background-color: #fff;
+  }
+  .card__side {
+    position: relative;
+    height: auto;
+    box-shadow: none;
+  }
+  .card__side--back {
+    transform: rotateY(0);
+    clip-path: polygon(0 13%, 100% 0, 100% 100%, 0% 100%);
+  }
+  .card:hover .card__side--font {
+    transform: rotateY(0);
+  }
+  .card__cta {
+    position: relative;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    transform: translate(0);
+    padding: 5rem;
+  }
+  .card__price-only {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+  .card__price-value {
+    font-size: 5rem;
+    font-weight: 100;
+  }
+}
+
 .stories {
   width: 75%;
   margin: 0 auto;
@@ -447,15 +550,27 @@
   transform: skewX(-12deg);
 }
 
+@media (max-width: 75em) {
+  .stories {
+    width: 100%;
+    transform: skew(0);
+  }
+}
+
 .stories__shape {
   height: 15rem;
   width: 15rem;
   float: left;
   shape-outside: circle(50% at 50% 50%);
-  -webkit-shape-outside: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
   transform: translateX(-3rem) skewX(12deg);
   overflow: hidden;
+}
+
+@media (max-width: 75em) {
+  .stories__shape {
+    transform: translateX(-3rem) skewX(0);
+  }
 }
 
 .stories__image {
@@ -465,8 +580,20 @@
   backface-visibility: hidden;
 }
 
+@media (max-width: 75em) {
+  .stories__image {
+    padding-right: 1rem;
+  }
+}
+
 .stories__text {
   transform: skewX(12deg);
+}
+
+@media (max-width: 75em) {
+  .stories__text {
+    transform: skew(0);
+  }
 }
 
 .stories__caption {
@@ -512,13 +639,25 @@
 .booking {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
   background-size: 100%;
-  height: 50rem;
   box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 75em) {
+  .booking {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(../img/nat-10.jpg);
+    background-size: cover;
+  }
 }
 
 .booking__form {
   width: 55%;
   padding: 6rem;
+}
+
+@media (max-width: 75em) {
+  .booking__form {
+    width: 100%;
+  }
 }
 
 .form__group:not(:last-child) {
@@ -588,6 +727,12 @@
   position: absolute;
   top: -.4rem;
   left: 0;
+}
+
+@media (max-width: 37.5em) {
+  .form__radio-button {
+    border: 2px solid #55c57a;
+  }
 }
 
 .form__radio-button::after {
@@ -707,6 +852,22 @@
   position: relative;
 }
 
+@media (max-width: 75em) {
+  .header {
+    height: 60vh;
+    clip-path: polygon(0 0, 100% 0, 100% 45vh, 0% 100%);
+    margin-bottom: 10rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .header {
+    height: 40vh;
+    clip-path: polygon(0 0, 100% 0, 100% 30vh, 0% 100%);
+    margin-bottom: 15rem;
+  }
+}
+
 .header__logo-box {
   position: absolute;
   top: 4rem;
@@ -730,8 +891,20 @@
   margin: 0 auto;
 }
 
+@media (max-width: 75em) {
+  .row {
+    max-width: 50rem;
+  }
+}
+
 .row:not(:last-child) {
   margin-bottom: 6rem;
+}
+
+@media (max-width: 75em) {
+  .row:not(:last-child) {
+    margin-bottom: 4rem;
+  }
 }
 
 .row::after {
@@ -746,6 +919,19 @@
 
 .row [class^="col-"]:not(:last-child) {
   margin-right: 4rem;
+}
+
+@media (max-width: 75em) {
+  .row [class^="col-"]:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 75em) {
+  .row [class^="col-"] {
+    width: 100% !important;
+  }
 }
 
 .row .col-1of2 {
@@ -994,5 +1180,11 @@ body {
   line-height: 1.7;
   color: #777;
   box-sizing: border-box;
-  margin: 2rem;
+  padding: 2rem;
+}
+
+@media (max-width: 75em) {
+  body {
+    padding: 0;
+  }
 }

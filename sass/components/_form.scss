@@ -18,6 +18,8 @@
         border-bottom: 2px solid transparent;
         transition: all .3s;
 
+
+
         &:focus{
             outline: none;
             box-shadow: 0 1rem 1.5rem rgba($color-dark-black,0.1);
@@ -79,6 +81,10 @@
         position: absolute;
         top: -.4rem;
         left: 0;
+
+        @include responsive(phone){
+            border: 2px solid $color-primary;
+        }
 
         &::after{
             content: "";
